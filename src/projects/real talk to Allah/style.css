@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+}
+
+#open-button, #close-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#close-button {
+    background-color: #f44336; /* Red for close button */
+}
+
+.door {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    margin-top: 50px;
+    position: relative; /* For positioning effects */
+}
+h1 {
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Add space around the heading */
+    font-family: 'Poppins', sans-serif; /* Use a clean and modern font */
+    color: rgb(255, 252, 252); /* Keep the text color white */
+    text-shadow: 
+        0px 0px 1px rgba(255, 215, 0, 0.6), /* Initial golden glow */
+        0px 0px 10px rgba(255, 223, 0, 0.4); /* Slightly larger glow */
+    animation: h1-glow-effect 3s infinite alternate; /* Add a glowing animation */
+}
+
+
+
+.door-img {
+    width: 300px;
+    height: 100%;
+    transition: transform 2s ease-in-out; /* Keeps the door animation smooth */
+    position: relative; /* Positioning for glitter effect */
+    background: linear-gradient(45deg, #d4af37, #cd7f32, #b8860b); /* Subtle golden gradient */
+    border-radius: 10px; /* Rounded edges */
+    border: 0.px solid rgba(255, 215, 0, 0.5); /* Golden border */
+    box-shadow: 0 0 15px 3px rgba(255, 215, 0, 0.5); /* Initial glow */
+    animation: glitter-glow 3s infinite alternate; /* Add glitter animation */
+}
+
+
+
+
+.book {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 600px;
+    z-index: 10;
+}
+
+.book-img {
+    width: 130%;
+    height: 600px;
+    position: relative;
+    left: -10%;
+}
+
+.pages {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 80%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.left-page, .right-page {
+    width: 48%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+}
+
+.prompt {
+    margin-top: 0px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+.prompt h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.vr {
+    margin-top: 90px;
+    margin-left: 105px;
+}
+
+
+
+
+/* Emotion button styles */
+.emotion-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Emotion button styles */
+.emotion-button {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.emotion-button:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+.emotion-button:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 480px) {
+    .emotion-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .door {
+        width: 100%;
+        height: 400px;
+    }
+
+    .book {
+        width: 80%;
+        height: 450px;
+    }
+
+    .book-img {
+        width: 150%;
+        left: -20%;
+    }
+
+    .pages {
+        width: 85%;
+        height: 75%;
+    }
+
+    .left-page, .right-page {
+        width: 48%;
+    }
+
+    .prompt {
+        width: 90%;
+        margin-top: 30px;
+    }
+}
+
+.right-page {
+    width: 48%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.right-page p {
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    #open-button, #close-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .door {
+        width: 100%;
+        height: 300px;
+    }
+
+    .book {
+        width: 85%;
+        height: 400px;
+    }
+
+    .book-img {
+        width: 160%;
+        left: -30%;
+    }
+
+    .pages {
+        width: 80%;
+        height: 70%;
+    }
+
+    .left-page, .right-page {
+        width: 100%;
+        height: 100%;
+    }
+
+    .prompt {
+        width: 95%;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .prompt h2 {
+        font-size: 20px;
+    }
+
+    .right-page p {
+        font-size: 16px;
+    }
+}
+
+
+

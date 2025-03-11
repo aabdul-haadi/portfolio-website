@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #121212, #1e1e1e);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1.title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffa726;
+    animation: fadeIn 2s ease-in-out;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa726;
+    color: #121212;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #ff9800;
+    transform: scale(1.05);
+}
+
+/* Home Page Styles */
+.quiz-selector {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+}
+
+.quiz-card {
+    padding: 30px; /* Increased padding for larger card size */
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.1);
+    background: #212121;
+    cursor: pointer;
+    text-align: center;
+    color: #ffa726;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px; /* Adjusted width for larger card */
+    height: 220px; /* Added height for consistent card size */
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-card:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 20px rgba(255, 152, 0, 0.5);
+}
+
+.quiz-logo {
+    width: 60px; /* Added for icon size */
+    height: 60px; /* Added for icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+/* Quiz Page Styles */
+#quiz-container {
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffa726;
+    animation: pulse 1s infinite;
+}
+
+#question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.1);
+    background: #1e1e1e;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.option:hover {
+    background: #2e2e2e;
+    transform: scale(1.03);
+}
+
+.correct {
+    background: #388e3c !important;
+    color: white;
+}
+
+.incorrect {
+    background: #d32f2f !important;
+    color: white;
+}
+
+#progress {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffa726;
+}
+
+/* Results Page Styles */
+#results-page {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+#home-button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #ffa726;
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+}
+
+#home-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#home-button:hover {
+    transform: scale(1.1);
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1.title {
+        font-size: 2em;
+    }
+
+    .quiz-card {
+        width: 140px;
+        height: 180px;
+        padding: 20px;
+    }
+
+    .quiz-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    #timer {
+        font-size: 1.5em;
+    }
+
+    #question {
+        font-size: 1.2em;
+    }
+
+    .option {
+        width: 90%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 1.8em;
+    }
+
+    .quiz-card {
+        width: 120px;
+        height: 150px;
+        padding: 15px;
+    }
+
+    .quiz-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    #timer {
+        font-size: 1.2em;
+    }
+
+    #question {
+        font-size: 1em;
+    }
+
+    .option {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

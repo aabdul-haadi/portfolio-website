@@ -1,0 +1,266 @@
+
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar .buttons {
+            display: flex;
+        }
+
+        .navbar .buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        .navbar .buttons .franchise {
+            background-color: #000;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .navbar .buttons .order {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar .logo img {
+                height: 40px;
+            }
+
+            .navbar .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .navbar .nav-links a {
+                padding: 10px 0;
+            }
+
+            .navbar .buttons {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .navbar .buttons a {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+        }
+
+        /* Carousel */
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* New Section */
+        .brands-section {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .brands-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .brands-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .brands-section .brand-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .brands-section .brand-container img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+        }
+
+        .brands-section .btn-container {
+            margin-top: 10px;
+        }
+
+        .brands-section .btn-container button {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .brands-section .brand-container img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Franchise Section */
+        .franchise-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .franchise-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .franchise-section p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .franchise-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .franchise-card {
+            background-color: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .franchise-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .franchise-card h3 {
+            margin: 15px 0;
+            font-size: 24px;
+            color: #ff0000;
+        }
+
+        .franchise-card p {
+            margin-bottom: 15px;
+        }
+
+        .franchise-card .btn-container {
+            margin-bottom: 20px;
+        }
+
+        .franchise-card .btn-container button {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .franchise-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .franchise-title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 36px;
+        }
+
+        .franchise-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .location-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #e00000;
+            text-align: center;
+        }
+
+        .location-name {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .location-details {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .get-directions-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 20px;
+            background-color: #fff;
+            color: #e00000;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }

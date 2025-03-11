@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Discount Generate - Nike Shoe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="product-page">
+        <h1>Nike Air Max 270</h1>
+        
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/1f/d4/44/1fd444795e99f2c69e7069e3263611b5.jpg" alt="Nike Air Max 270">
+            <div class="product-info">
+                <p>Experience the ultimate comfort and style with Nike Air Max 270.</p>
+                <span class="price" id="originalPrice">Price: $150</span>
+            </div>
+        </div>
+
+        <div class="discount-section">
+            <h3>Enter Coupon Code for Discount</h3>
+            <input type="text" id="couponCode" placeholder="Enter coupon code">
+            <button onclick="applyDiscount()">Apply Discount</button>
+            <p id="discountMessage"></p>
+            <span class="final-price" id="finalPrice"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

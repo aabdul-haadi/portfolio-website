@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Allah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Talk to Allah</h1>
+
+        <!-- Door Section -->
+        <div class="door" id="door">
+            <img src="assets/d1.jpeg" class="door-img left" id="left-door" />
+            <img src="assets/d2.jpeg" class="door-img right" id="right-door" />
+        </div>
+        <button id="open-button" onclick="openDoor()">Open Door</button>
+        <button id="close-button" onclick="closeDoor()">Close Door</button>
+
+        <!-- Book Section (Initially Hidden) -->
+        <div class="book" id="book-section">
+            <img src="assets/book.png" id="book-image" class="book-img" />
+            <div class="pages" id="pages-section">
+                <!-- Left page: Contains content -->
+                <div class="left-page" id="left-page">
+                    <div class="vr" id="verse-section">
+                        <p id="quran-verse">“And your Lord says, ‘Call upon Me; I will respond to you.’” (Quran 40:60)</p>
+                    </div>
+
+                    <div class="prompt" id="prompt-section">
+                        <h2 id="emotion-prompt">What are you feeling?</h2>
+                        <div class="emotion-buttons" id="buttons-section">
+                            <button class="emotion-button" onclick="displayVerse('happy')">Happy</button>
+                            <button class="emotion-button" onclick="displayVerse('sad')">Sad</button>
+                            <button class="emotion-button" onclick="displayVerse('grateful')">Grateful</button>
+                            <button class="emotion-button" onclick="displayVerse('anxious')">Anxious</button>
+                            <button class="emotion-button" onclick="displayVerse('confused')">Confused</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right page: Contains response content -->
+                <div class="right-page" id="right-page">
+                    <p id="emotion-response"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="emotion-verse" id="emotion-response-section">
+            <p class="vrr" id="emotion-response"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

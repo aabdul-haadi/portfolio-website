@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .spinBtn {
+    position: absolute;
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 4px solid rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .wheel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(136, 19, 66), rgb(187, 114, 5), #09f, #2b2b);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #333, 
+                0 0 0 15px rgb(202, 198, 198),
+                0 0 0 18px #000;
+    overflow: hidden;
+    transition: transform 5s ease-in-out;
+}
+
+.container .wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.container .wheel .number span {
+    transform: rotate(-45deg);
+    font-size: 0.9em;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Needle/Arrow Styles */
+.indicator {
+    border: #000;
+    border-bottom-left-radius: 10;
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #fff; /* Color of the arrow */
+    z-index: 20; /* Make sure it's on top */
+    
+}
+
+/* Verse Display Styles */
+.verseDisplay {
+    margin-top: 20px; /* Space below the wheel */
+    padding: 20px;
+    background-color: rgba(252, 252, 252, 0.8); /* Light orange background */
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    font-size: 1.2em;
+    display: none; 
+    transition: opacity 0.5s ease;
+}
+
+.verseDisplay.active {
+    display: block; }
+
+
+.verseDisplay {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(252, 252, 252, 0.8); 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    font-size: 1.2em;
+    display: none; 
+    transition: opacity 0.5s ease;
+}
+
+.verseDisplay.active {
+    display: block; 
+}
+.verseM{
+    color: rgb(151, 1, 1);
+
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quranic Verse Spinner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <div class="number" style="--i:0;"><span> Ar-Rahman</span></div>
+            <div class="number" style="--i:1;"><span> Al-Mulk</span></div>
+            <div class="number" style="--i:2;"><span> An-Nur</span></div>
+            <div class="number" style="--i:3;"><span> Al-Baqarah</span></div>
+            <div class="number" style="--i:4;"><span> Yasin</span></div>
+            <div class="number" style="--i:5;"><span> Al-Kahf</span></div>
+            <div class="number" style="--i:6;"><span> Al-Isra</span></div>
+            <div class="number" style="--i:7;"><span> Al-Ikhlas</span></div>
+        </div>
+        <div class="indicator"></div> <!-- Needle/Arrow for the spinner -->
+    </div>
+
+    <!-- Modal for Verse Translation -->
+    <div id="verseDisplay" class="verseDisplay" >
+        <p id="verseMessage" class="verseM">Allah عَزَّ وَ جَلَّ wants to say to you:</p>
+        <p id="verseText"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

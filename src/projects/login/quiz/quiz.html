@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home">
+        <h1 class="title">Quiz App</h1>
+        <div class="quiz-selector">
+            <div class="quiz-card" data-topic="html">
+                <img src="html.png" alt="HTML Logo" class="quiz-logo" style="height: 150px; width: 150px;">
+                <p>HTML</p>
+            </div>
+            <div class="quiz-card" data-topic="css">
+                <img src="css.png" alt="CSS Logo" class="quiz-logo" style="height: 150px; width: 150px;">
+                <p>CSS</p>
+            </div>
+            <div class="quiz-card" data-topic="js">
+                <img src="js.png" alt="JavaScript Logo" class="quiz-logo" style="height: 150px; width: 150px;">
+                <p>JavaScript</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" style="display: none;">
+        <div id="quiz-container">
+            <div id="timer">10</div>
+            <div id="question">Question text goes here</div>
+            <div id="options">
+                <button class="option">Option 1</button>
+                <button class="option">Option 2</button>
+                <button class="option">Option 3</button>
+                <button class="option">Option 4</button>
+            </div>
+            <div id="progress">Question 1/10</div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" style="display: none;">
+        <h1>Your Score: <span id="score">0%</span></h1>
+        <p id="feedback">Feedback goes here</p>
+        <canvas id="confetti"></canvas>
+        <button id="retry">Try Again</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

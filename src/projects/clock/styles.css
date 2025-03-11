@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f0f2d;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #121212, #333333);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.time span {
+    font-size: 50px;
+    color: hsl(0, 0%, 100%);
+    animation: fade-in 0.6s ease;
+}
+
+.label {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-top: 5px;
+}
+
+.separator {
+    font-size: 50px;
+    color: #00f5ff;
+    animation: fade-in 0.6s ease;
+}
+
+.clock-container::before, .clock-container::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.5;
+    background: #ff416c;
+    animation: float 4s ease-in-out infinite;
+}
+
+.clock-container::before {
+    top: -20px;
+    left: -40px;
+    background: #ff416c;
+}
+
+.clock-container::after {
+    bottom: -20px;
+    right: -40px;
+    background: #5b2eff;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-15px) translateX(15px); }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+body, .time span, .label, .separator {
+    font-family: 'Roboto Mono', monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
