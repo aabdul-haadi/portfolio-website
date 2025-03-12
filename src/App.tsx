@@ -125,8 +125,8 @@ function App() {
             </motion.div>
             
             <div className="hidden md:flex space-x-1">
-              {navItems.map((item, index) => (
-                <Link
+             {navItems.map((item) => (
+  <Link
                   key={item}
                   to={item.toLowerCase()}
                   spy={true}
