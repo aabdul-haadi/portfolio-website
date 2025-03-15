@@ -5,6 +5,27 @@ import { Parallax } from 'react-parallax';
 import { useInView } from 'react-intersection-observer';
 import { Menu, X, Github, Linkedin, Mail, Download, Code, ExternalLink, Heart, Sparkles } from 'lucide-react';
 
+const professionalProjects = [
+  {
+    title: "Tenants Registration",
+    description: "A comprehensive tenant registration and verification system for Sindh Police.",
+    image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap"]
+  },
+  {
+    title: "E-verification",
+    description: "Digital verification platform for streamlining police verification processes.",
+    image: "https://images.unsplash.com/photo-1568952433726-3896e3881c65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap"]
+  },
+  {
+    title: "MILAP",
+    description: "Modern Investigation Leads and Analysis Platform for enhanced police operations.",
+    image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    tech: ["React", "TypeScript", "Tailwind CSS"]
+  }
+];
+
 const projects = [
   {
     title: "Choose Emotions",
@@ -28,7 +49,7 @@ const projects = [
     tech: ["HTML", "JavaScript", "CSS"]
   },
   {
-    title: "Login System",
+    title: "Login & Quiz Platform",
     description: "A responsive login and registration page design.",
     image: "/src/assets/login.png",
     link: "/src/projects/login/index.html",
@@ -86,7 +107,7 @@ function App() {
 
   return (
     <div className="bg-gray-900 text-white">
-      {/* Enhanced Navigation with Gradient Border and Glass Effect */}
+      {/* Navigation */}
       <motion.nav 
         className={`fixed w-full z-50 transition-all duration-300 ${
           scrolled 
@@ -125,8 +146,8 @@ function App() {
             </motion.div>
             
             <div className="hidden md:flex space-x-1">
-             {navItems.map((item) => (
-  <Link
+              {navItems.map((item) => (
+                <Link
                   key={item}
                   to={item.toLowerCase()}
                   spy={true}
@@ -175,7 +196,7 @@ function App() {
           </div>
         </div>
 
-        {/* Enhanced Mobile Menu with Animations */}
+        {/* Mobile Menu */}
         <AnimatePresence>
           {menuOpen && (
             <motion.div
@@ -228,7 +249,6 @@ function App() {
                 Web Developer & Designer
               </h1>
               <motion.div
-                // className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20 blur-lg -z-10"
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.2, 0.3, 0.2],
@@ -303,47 +323,105 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
-     {/* Projects Section */}
-<section id="projects" className="py-20 px-6 bg-gray-800">
-  <div className="container mx-auto">
-    <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-      Projects
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="bg-gray-900 rounded-lg overflow-hidden group relative"
-        >
-          {/* Image Container - Fixed Position */}
-          <div className="relative w-full h-60">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-contain"
-              loading="lazy"
-            />
-          </div>
+      {/* Professional Projects Section */}
+      <section className="py-20 px-6 bg-gray-900">
+        <div className="container mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+          >
+            Professional Projects at Sindh Police
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {professionalProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="bg-gray-800 rounded-xl overflow-hidden group relative transform transition-all duration-300 hover:shadow-2xl"
+              >
+                {/* Animated Gradient Border */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-gradient"></div>
+                
+                <div className="relative bg-gray-900 rounded-xl overflow-hidden">
+                  {/* Image Container with Overlay */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
+                  </div>
 
-          {/* Project Details */}
-          <div className="p-6">
-            <h3 className="text-xl font-bold text-cyan-400 mb-2">{project.title}</h3>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              <span>View Project</span>
-              <ExternalLink size={16} />
-            </a>
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-cyan-400 mb-2">{project.title}</h3>
+                    <p className="text-gray-400 mb-4">{project.description}</p>
+                    
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 text-sm bg-gray-800 text-cyan-400 rounded-full border border-cyan-500/30"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
+        </div>
+      </section>
+
+      {/* Other Projects Section */}
+      <section id="projects" className="py-20 px-6 bg-gray-800">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Other Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-900 rounded-lg overflow-hidden group relative"
+              >
+                {/* Image Container - Fixed Position */}
+                <div className="relative w-full h-60">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Project Details */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-cyan-400 mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    <span>View Project</span>
+                    <ExternalLink size={16} />
+                  </a>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -500,7 +578,7 @@ function App() {
         </div>
       </section>
 
-      {/* Enhanced Footer */}
+      {/* Footer */}
       <footer className="py-12 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="relative z-10">
