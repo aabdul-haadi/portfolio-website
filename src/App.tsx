@@ -10,6 +10,12 @@ import shoesImg from "/src/assets/shoes.png";
 import loginImg from "/src/assets/login.png";
 import talktoAllahImg from "/src/assets/talktoAllah.png";
 import wheelImg from "/src/assets/wheel.webp";
+import BreakfastImg from "/src/assets/breakfast.png";
+import EarthOrbitImg from "/src/assets/earth-orbit.png";
+import ETutorImg from "/src/assets/e-tutor.png";
+
+
+
 
 const professionalProjects = [
   {
@@ -26,13 +32,57 @@ const professionalProjects = [
   },
   {
     title: "MILAP",
-    description: "Modern Investigation Leads and Analysis Platform for enhanced police operations.",
+    description: "Mutual Integereation Locating At risk Person for enhanced police operations.",
     image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     tech: ["React", "TypeScript", "Tailwind CSS"]
   }
 ];
 
 const projects = [
+
+
+  {
+    title: "Talk To Allah",
+    description: "A spiritual guide app for daily reminders and prayers.",
+    image: talktoAllahImg,
+    link: "https://talk-to-allah.vercel.app/", // Fixed path
+    tech: ["HTML", "CSS", "JavaScript"]
+  },
+
+  {
+    title: "E-Tutor Platform",
+    description: "An interactive online tutoring platform built with ReactJS, TailwindCSS, and Framer Motion for a smooth user experience.",
+    image: ETutorImg, // Make sure to import the correct image
+    link: "src/projects/e-tutor",
+    tech: ["HTML", "ReactJs", "TailwindCSS", "Framer Motion"]
+},
+
+
+  {
+    title: "Login & Quiz Platform",
+    description: "A responsive login and registration page design.",
+    image: loginImg,
+    link: "src/projects/login/index.html",
+    tech: ["HTML", "CSS", "JavaScript"]
+  },
+
+    {
+    title: "Restaurant Website",
+    description: "Modern Animated Restaurant Website using ReactJS + Tailwind + Framer-Motion.",
+    image: BreakfastImg,
+    link: "src/projects/",
+    tech: ["HTML", "ReactJs", "TailwindCSS"]
+  },
+
+
+  {
+    title: "EarthOrbit Website",
+    description: "A futuristic space exploration website built with ReactJS, TailwindCSS, and Framer Motion.",
+    image: EarthOrbitImg, // Make sure to import the correct image
+    link: "src/projects/earth-orbit",
+    tech: ["HTML", "ReactJs", "TailwindCSS", "Framer Motion"]
+},
+
   {
     title: "Choose Emotions",
     description: "An app designed to manage and track your emotions daily.",
@@ -54,20 +104,7 @@ const projects = [
     link: "/projects/discount/index.html",
     tech: ["HTML", "JavaScript", "CSS"]
   },
-  {
-    title: "Login & Quiz Platform",
-    description: "A responsive login and registration page design.",
-    image: loginImg,
-    link: "/projects/login/index.html",
-    tech: ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    title: "Talk To Allah",
-    description: "A spiritual guide app for daily reminders and prayers.",
-    image: talktoAllahImg,
-    link: "/projects/talk-to-allah/index.html", // Fixed path
-    tech: ["HTML", "CSS", "JavaScript"]
-  },
+ 
   {
     title: "Wheel Project",
     description: "A fun spinning wheel project for gamification and selection.",
