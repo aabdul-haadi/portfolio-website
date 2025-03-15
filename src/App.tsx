@@ -4,6 +4,12 @@ import { Link } from 'react-scroll';
 import { Parallax } from 'react-parallax';
 import { useInView } from 'react-intersection-observer';
 import { Menu, X, Github, Linkedin, Mail, Download, Code, ExternalLink, Heart, Sparkles } from 'lucide-react';
+import chooseImg from "/src/assets/choose.png";
+import clockImg from "/src/assets/clock.png";
+import shoesImg from "/src/assets/shoes.png";
+import loginImg from "/src/assets/login.png";
+import talktoAllahImg from "/src/assets/talktoAllah.png";
+import wheelImg from "/src/assets/wheel.webp";
 
 const professionalProjects = [
   {
@@ -30,47 +36,46 @@ const projects = [
   {
     title: "Choose Emotions",
     description: "An app designed to manage and track your emotions daily.",
-    image: "/src/assets/choose.png",
-    link: "/src/projects/Choose Emotions/index.html",
+    image: chooseImg, // ✅ Use imported image
+    link: "/projects/choose-emotions/index.html", // Fixed path
     tech: ["HTML", "CSS/BootStrap", "JavaScript"]
   },
   {
     title: "Clock",
     description: "A digital clock with elegant design and real-time updates.",
-    image: "/src/assets/clock.png",
-    link: "/src/projects/clock/index.html",
+    image: clockImg,
+    link: "/projects/clock/index.html",
     tech: ["HTML", "CSS", "JavaScript"]
   },
   {
     title: "Discount Calculator",
     description: "A tool to calculate discounts and savings in real-time.",
-    image: "/src/assets/shoes.png",
-    link: "/src/projects/discount/index.html",
+    image: shoesImg,
+    link: "/projects/discount/index.html",
     tech: ["HTML", "JavaScript", "CSS"]
   },
   {
     title: "Login & Quiz Platform",
     description: "A responsive login and registration page design.",
-    image: "/src/assets/login.png",
-    link: "/src/projects/login/index.html",
+    image: loginImg,
+    link: "/projects/login/index.html",
     tech: ["HTML", "CSS", "JavaScript"]
   },
   {
     title: "Talk To Allah",
     description: "A spiritual guide app for daily reminders and prayers.",
-    image: "/src/assets/talktoAllah.png",
-    link: "/src/projects/real talk to Allah/index.html",
+    image: talktoAllahImg,
+    link: "/projects/talk-to-allah/index.html", // Fixed path
     tech: ["HTML", "CSS", "JavaScript"]
   },
   {
     title: "Wheel Project",
     description: "A fun spinning wheel project for gamification and selection.",
-    image: "/src/assets/wheel.webp",
-    link: "/src/projects/wheel project/index.html",
+    image: wheelImg,
+    link: "/projects/wheel-project/index.html", // Fixed path
     tech: ["JavaScript", "CSS", "HTML"]
   }
 ];
-
 const skills = [
   { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
@@ -615,10 +620,13 @@ function App() {
                   Contact
                 </h3>
                 <ul className="space-y-2 text-gray-400">
-                  <li className="flex items-center space-x-2">
-                    <Mail size={16} />
-                    <span>ahaadi1001@gmail.com</span>
-                  </li>
+                 <li className="flex items-center space-x-2">
+  <Mail size={16} />
+  <a href="mailto:ahaadi1001@gmail.com" className="text-blue-500 hover:underline">
+    ahaadi1001@gmail.com
+  </a>
+</li>
+
                   <li className="flex items-center space-x-2">
                     <Github size={16} />
                     <a href="https://github.com/aabdul-haadi/" className="hover:text-cyan-400 transition-colors">
@@ -627,7 +635,7 @@ function App() {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Linkedin size={16} />
-                    <a href="https://www.linkedin.com/in/abdul-haadi-15b957320/" className="hover:text-cyan-400 transition-colors">
+                    <a href="https://www.linkedin.com/in/abdul-hadi-developer/" className="hover:text-cyan-400 transition-colors">
                       LinkedIn
                     </a>
                   </li>
